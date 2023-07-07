@@ -1,0 +1,97 @@
+li {
+  list-style: none;
+  margin-bottom: 25px;
+}
+
+li a {
+  text-decoration: unset;
+}
+
+.logo {
+  height: 35px;
+  padding-right: 5px;
+  padding-left: 10px;
+}
+
+#nav {
+  display: flex;
+  padding-right: 30px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  align-items: flex-start;
+}
+
+.logo_title_container {
+  display: flex;
+  align-items: center;
+}
+
+.NavBar_ul {
+  display: flex;
+  justify-content: space-between;
+  padding: unset;
+  gap: 18px;
+  margin-top: unset;
+  margin-bottom: unset;
+}
+
+.NavBar_ul li a {
+  font-size: 13px;
+  color: #1193ec;
+}
+
+.fontW400 {
+  font-weight: 600;
+}
+
+.profileLi {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
+.spearator {
+  height: 12px;
+  width: 2px;
+  background-color: #938c8c;
+  margin-right: 15px;
+}
+
+button {
+  border: unset;
+  background-color: transparent;
+  padding: 10px;
+  color: black;
+  border-radius: 3px;
+  font-size: 26px;
+}
+
+.margin0 {
+  margin: unset;
+}
+
+.alignTop {
+  align-items: flex-start !important;
+}
+
+.padding-left0 {
+  padding-left: unset;
+}
+
+.margin-bottom0 {
+  margin-bottom: unset;
+}
+
+#searchField {
+  width: 300px;
+  height: 30px;
+}
+
+.suggestion {
+  width: 300px;
+  height: 30px;
+}
