@@ -73,7 +73,7 @@ const Navbar = () => {
               value={textValue}
             />
             {isInput && (
-              <ul ref={infoList} className="suggestion-list">
+              <ul ref={infoList} className="suggestion-list" data-testid="suggestion-list">
                 {cities.map((city) => (
                   <li key={city.id}>
                     <NavLink to={`/searchForcast/${city.latitude}/${city.longitude}`}>

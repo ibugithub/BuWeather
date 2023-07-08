@@ -31,18 +31,16 @@ const Forcast = () => {
 
   return (
     <>
-      <li>
-        {forcastInfo.day}
-      </li>
-      <li>
-        {forcastInfo.weather}
-      </li>
-      <li>
+      <li aria-label="day">{forcastInfo.day}</li>
+      <li aria-label="weather">{forcastInfo.weather}</li>
+      <li aria-label="temperature">
         Temperature:
+        {' '}
         {forcastInfo.temperature}
       </li>
-      <li>
+      <li aria-label="windSpeed">
         Wind Speed:
+        {' '}
         {forcastInfo.windSpeed}
       </li>
     </>

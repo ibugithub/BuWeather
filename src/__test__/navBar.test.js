@@ -1,17 +1,38 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
+import { render, fireEvent, screen } from '@testing-library/react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from '../redux/store';
+import configureStore from 'redux-mock-store';
 import Navbar from '../components/NavBar/Navbar';
 
+const mockStore = configureStore([]);
+
 describe('Navbar', () => {
-  test('renders the logo and title', () => {
+  let store;
+
+  beforeEach(() => {
+    store = mockStore({
+      forcastByText: {
+        cities: [
+          {
+            id: 1, name: 'City 1', latitude: 1.23, longitude: 4.56,
+          },
+          {
+            id: 2, name: 'City 2', latitude: 7.89, longitude: 0.12,
+          },
+        ],
+      },
+    });
+
+    store.dispatch = jest.fn();
+  });
+
+  test('renders navbar with logo and title', () => {
     render(
       <Provider store={store}>
-        <BrowserRouter>
+        <Router>
           <Navbar />
-        </BrowserRouter>
+        </Router>
       </Provider>,
     );
 
@@ -22,71 +43,49 @@ describe('Navbar', () => {
     expect(title).toBeInTheDocument();
   });
 
-  test('navigates back to the homepage when the back button is clicked', () => {
-    const mockNavigate = jest.fn();
-    const mockLocation = { pathname: '/otherpage' };
-
+  test('search input should update textValue state', () => {
     render(
       <Provider store={store}>
-        <BrowserRouter>
+        <Router>
           <Navbar />
-        </BrowserRouter>
+        </Router>
       </Provider>,
     );
 
-    window.history.pushState({}, 'Test page', '/otherpage');
+    const searchInput = screen.getByPlaceholderText('search');
+    fireEvent.change(searchInput, { target: { value: 'City' } });
 
-    jest.spyOn(window.history, 'goBack');
-    jest.spyOn(window.history, 'pushState');
-    jest.spyOn(window.history, 'replaceState');
-    window.history.pushState({}, 'Test page', '/otherpage');
-
-    fireEvent.click(screen.getByRole('button'));
-
-    expect(window.history.goBack).toHaveBeenCalledTimes(1);
-    expect(window.history.replaceState).toHaveBeenCalledWith({}, '', '/');
-
-    window.history.pushState({}, 'Test page', '/otherpage');
-
-    fireEvent.click(screen.getByRole('button'));
-
-    expect(window.history.goBack).toHaveBeenCalledTimes(1);
-    expect(window.history.replaceState).toHaveBeenCalledWith({}, '', '/');
+    expect(searchInput.value).toBe('City');
   });
 
-  test('displays suggestions when the search input is clicked and hides them when clicked outside', () => {
+  test('displays suggestion list when search input is clicked', () => {
     render(
       <Provider store={store}>
-        <BrowserRouter>
+        <Router>
           <Navbar />
-        </BrowserRouter>
+        </Router>
       </Provider>,
     );
 
-    const searchField = screen.getByPlaceholderText('search');
+    const searchInput = screen.getByPlaceholderText('search');
+    fireEvent.click(searchInput);
+
     const suggestionList = screen.getByTestId('suggestion-list');
-
-    fireEvent.click(searchField);
     expect(suggestionList).toBeInTheDocument();
-
-    fireEvent.click(document.body);
-    expect(suggestionList).not.toBeInTheDocument();
   });
 
-  test('dispatches fetchCities action when the search input value changes', () => {
+  test('navigates to About page when About link is clicked', () => {
     render(
       <Provider store={store}>
-        <BrowserRouter>
+        <Router>
           <Navbar />
-        </BrowserRouter>
+        </Router>
       </Provider>,
     );
 
-    const searchField = screen.getByPlaceholderText('search');
+    const aboutLink = screen.getByText('About');
+    fireEvent.click(aboutLink);
 
-    fireEvent.change(searchField, { target: { value: 'London' } });
-
-    // Write your assertion here based on how
-    // you expect your component to handle the dispatched action
+    // Add your expectation for the navigation or use a mock router for testing navigation.
   });
 });

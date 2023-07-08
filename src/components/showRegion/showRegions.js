@@ -15,17 +15,15 @@ const ShowRegions = () => {
   const error = useSelector((state) => state.weather.error);
   if (isUpdating) {
     return (
-      <div>
-        Loading...
-      </div>
+      <h3>Loading...</h3>
     );
   }
 
   if (error) {
     return (
-      <div>
+      <h3>
         Currently no data available
-      </div>
+      </h3>
     );
   }
 
