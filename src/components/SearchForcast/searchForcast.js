@@ -12,44 +12,46 @@ const SearchForcast = () => {
   }, [dispatch, latitude, longitude]);
 
   const forcastInfo = useSelector((state) => state.forcastByText.forcast);
-
   return (
-    <div className="search-forcast-container">
-      <div className="weather-card">
-        <img className="weather-icon" src={forcastInfo.icon} alt="weather icon" />
-        <div className="weather-details">
-          <h3 className="weather-title">{forcastInfo.name}</h3>
-          <p className="weather-description">
-            {forcastInfo.weather}
+    <div className="weathercontainer">
+      <img className="weatherImg" src={forcastInfo.icon} alt="weather icon" />
+      <div className="weatherUl weatherCard">
+        <ul className="ul1">
+          <li className="weatherLi">{forcastInfo.name}</li>
+          <li className="weatherLi">{forcastInfo.region}</li>
+          <li className="weatherLi">{forcastInfo.country}</li>
+          <li className="weatherLi">{forcastInfo.day}</li>
+        </ul>
+        <ul className="ul2">
+          <li className="weatherLi">{forcastInfo.weather}</li>
+          <li className="weatherLi">
+            Temperature:
             {' '}
-            (
             {forcastInfo.temperature}
-            °C)
-          </p>
-          <div className="weather-extra">
-            <div className="weather-info">
-              <p className="weather-info-text">Feels Like</p>
-              <p className="weather-info-value">
-                {forcastInfo.feelsLike}
-                °C
-              </p>
-            </div>
-            <div className="weather-info">
-              <p className="weather-info-text">Wind Speed</p>
-              <p className="weather-info-value">
-                {forcastInfo.windSpeed}
-                {' '}
-                km/h
-              </p>
-            </div>
-            <div className="weather-info">
-              <p className="weather-info-text">Wind Direction</p>
-              <p className="weather-info-value">{forcastInfo.winddir}</p>
-            </div>
-          </div>
-        </div>
+          </li>
+          <li className="weatherLi">
+            feelsLike:
+            { ' '}
+            {forcastInfo.feelsLike}
+          </li>
+
+        </ul>
+        <ul className="ul3">
+          <li className="weatherLi">
+            Wind Speed:
+            {' '}
+            {forcastInfo.windSpeed}
+          </li>
+          <li className="weatherLi">
+            Wind Direction:
+            {' '}
+            {forcastInfo.winddir}
+          </li>
+        </ul>
+
       </div>
     </div>
+
   );
 };
 

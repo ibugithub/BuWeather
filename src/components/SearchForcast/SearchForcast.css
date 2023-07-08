@@ -1,62 +1,75 @@
-.search-forcast-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
-
-.weather-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.weathercontainer {
   background-color: skyblue;
   border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.weather-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.weather-icon {
-  width: 120px;
-  height: 120px;
-  margin-bottom: 20px;
-}
-
-.weather-title {
-  font-size: 28px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.weather-description {
-  font-size: 22px;
-  color: #666;
-  margin-bottom: 20px;
-}
-
-.weather-extra {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 20px;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+  margin-top: 70px;
+}
+
+.weathercontainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.weatherImg {
+  width: 80px; 
+  height: 80px; 
+  margin-right: 20px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.weatherImg:hover {
+  transform: scale(1.1);
+}
+
+.weatherCard {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
-  gap: 30px;
 }
 
-.weather-info {
-  text-align: center;
+.ul1,
+.ul2,
+.ul3 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 33.33%;
+  box-sizing: border-box;
 }
 
-.weather-info-text {
-  font-size: 16px;
-  color: #666;
-}
-
-.weather-info-value {
-  font-size: 18px;
+.weatherLi {
+  margin-bottom: 10px;
+  font-family: 'Helvetica Neue', Arial, sans-serif; 
+  font-size: 14px; 
   color: #333;
+}
+
+@media (max-width: 768px) {
+  .weathercontainer {
+    width: 80%;
+  }
+
+  .weatherImg {
+    margin-right: 0;
+    margin-bottom: 20px;
+    align-self: flex-start;
+  }
+
+  .ul1,
+  .ul2,
+  .ul3 {
+    width: 100%;
+  }
 }

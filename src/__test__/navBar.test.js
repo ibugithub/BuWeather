@@ -52,7 +52,7 @@ describe('Navbar', () => {
       </Provider>,
     );
 
-    const searchInput = screen.getByPlaceholderText('search');
+    const searchInput = screen.getByPlaceholderText('Search');
     fireEvent.change(searchInput, { target: { value: 'City' } });
 
     expect(searchInput.value).toBe('City');
@@ -67,7 +67,7 @@ describe('Navbar', () => {
       </Provider>,
     );
 
-    const searchInput = screen.getByPlaceholderText('search');
+    const searchInput = screen.getByPlaceholderText('Search');
     fireEvent.click(searchInput);
 
     const suggestionList = screen.getByTestId('suggestion-list');
@@ -85,7 +85,5 @@ describe('Navbar', () => {
 
     const aboutLink = screen.getByText('About');
     fireEvent.click(aboutLink);
-
-    // Add your expectation for the navigation or use a mock router for testing navigation.
   });
 });
