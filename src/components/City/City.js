@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useParams } from 'react-router-dom';
-import { fetchCities } from '../redux/slices/WeatherSlice';
+import { fetchCities } from '../../redux/slices/WeatherSlice';
+import './City.css';
 
 const City = () => {
   const dispatch = useDispatch();
@@ -30,16 +31,15 @@ const City = () => {
   }
 
   return (
-    <>
+    <div className="city-list-container">
       {cities.map((city) => (
-        <li key={city.cityId}>
+        <div className="city-list-item" key={city.cityId}>
           <NavLink to={`/Forcast/${city.name}`}>
             {city.name}
           </NavLink>
-        </li>
+        </div>
       ))}
-
-    </>
+    </div>
   );
 };
 

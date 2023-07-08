@@ -1,20 +1,65 @@
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto;
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.contentContainer {
+.show-regions-container {
   display: flex;
-  background: url(http://localhost:3000/static/media/cloudy.a6d0b7d87d2022baaf4.png);
-  align-items: center;
-  flex-direction: column;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 270px;
-  height: 180px;
-  margin-top: 4%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 30px;
+  background-color: #f1f1f1;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
-.contentLogo {
-  width: 70px;
+.show-regions-card {
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #3182ce, #63b3ed);
+  font-family: 'Your Custom Font', sans-serif;
+  color: black;
+}
+
+.show-regions-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.show-regions-card a {
+  text-decoration: none;
+  color: #060404;
+}
+
+.show-regions-card h4 {
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 600px) {
+  .show-regions-card {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .show-regions-card {
+    height: auto;
+  }
+}
+
+@media (min-width: 500px) {
+  .show-regions-card {
+    flex-basis: calc(45% - 19px);
+  }
+}
+
+@media (min-width: 800px) {
+  .show-regions-card {
+    flex-basis: calc(30% - 16px);
+  }
 }

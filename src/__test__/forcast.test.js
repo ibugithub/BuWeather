@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { fetchForcast } from '../redux/slices/WeatherSlice';
-import Forcast from '../components/Forcast';
+import Forcast from '../components/Forcast/Forcast';
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);

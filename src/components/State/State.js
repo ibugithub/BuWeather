@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink, useParams } from 'react-router-dom';
-import { fetchStates } from '../redux/slices/WeatherSlice';
+import { fetchStates } from '../../redux/slices/WeatherSlice';
+import './State.css';
 
 const State = () => {
   const dispatch = useDispatch();
@@ -30,16 +31,15 @@ const State = () => {
   }
 
   return (
-    <>
+    <div className="state-list-container">
       {states.map((state) => (
-        <li key={state.stateId}>
+        <div className="state-list-item" key={state.stateId}>
           <NavLink to={`/City/${state.stateId}`}>
             {state.name}
           </NavLink>
-        </li>
+        </div>
       ))}
-    </>
-
+    </div>
   );
 };
 

@@ -2,13 +2,13 @@ import React, { useState, useRef, useEffect } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import './Navbar.css';
 import { useDispatch, useSelector } from 'react-redux';
-import saturn from '../../images/saturn.png';
+import saturn from '../../images/cloudy2.png';
 import { fetchCities } from '../../redux/slices/forcast-by-text-slice';
+import back from '../../images/back.png';
 
 const Navbar = () => {
   const navBar = useRef(null);
   const navContainer = useRef(null);
-  const separator = useRef(null);
   const infoList = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
@@ -34,8 +34,8 @@ const Navbar = () => {
 
   const handleChange = (event) => {
     setTextValue(event.target.value);
-    if (textValue !== '') {
-      dispatch(fetchCities(textValue));
+    if (event.target.value !== '') {
+      dispatch(fetchCities(event.target.value));
     }
   };
 
@@ -52,23 +52,21 @@ const Navbar = () => {
       <div className="logo_title_container">
         {notInHomePage && (
           <button type="button" onClick={handleGoBack}>
-            {' '}
-            {'<'}
-            {' '}
+            <img id="backImg" src={back} alt="this is a back button" />
           </button>
         )}
         <img className="logo" src={saturn} alt="Saturn Logo" />
-        <h3 className="fontW400 margin0">BuWeather</h3>
+        <h3 className="fontW400 margin0 siteTitle">BuWeather</h3>
       </div>
 
       <div>
         <ul className="NavBar_ul" data-testid="navBar" ref={navBar}>
-          <li className="margin-bottom0">
+          <li className="searchContainer">
             <input
               onClick={handleClick}
               id="searchField"
               type="text"
-              placeholder="search"
+              placeholder="Search"
               onChange={handleChange}
               value={textValue}
             />
@@ -88,9 +86,8 @@ const Navbar = () => {
               </ul>
             )}
           </li>
-          <li className="profileLi margin-bottom0">
-            <div ref={separator} className="spearator" data-testid="separator" />
-            <NavLink to="/About"> About </NavLink>
+          <li className="profileLi">
+            <NavLink to="/About">About</NavLink>
           </li>
         </ul>
       </div>
