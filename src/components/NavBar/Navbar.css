@@ -1,28 +1,11 @@
-li {
-  list-style: none;
-  margin-bottom: 25px;
-}
-
-li a {
-  text-decoration: unset;
-}
-
-.logo {
-  height: 35px;
-  padding-right: 5px;
-  padding-left: 10px;
-}
+/* CSS for Navbar Component */
 
 #nav {
   display: flex;
-  padding-right: 30px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  align-items: center;
   justify-content: space-between;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  align-items: flex-start;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 10px 20px;
 }
 
 .logo_title_container {
@@ -30,68 +13,90 @@ li a {
   align-items: center;
 }
 
-.NavBar_ul {
-  display: flex;
-  justify-content: space-between;
-  padding: unset;
-  gap: 18px;
-  margin-top: unset;
-  margin-bottom: unset;
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
 }
 
-.NavBar_ul li a {
-  font-size: 13px;
-  color: #1193ec;
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+  color: #333;
 }
 
-.fontW400 {
-  font-weight: 600;
-}
-
-.profileLi {
+ul.NavBar_ul {
   display: flex;
   align-items: center;
-  height: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li.margin-bottom0 {
+  margin-bottom: 0;
+}
+
+input#searchField {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+  color: #333;
+}
+
+ul.suggestion-list {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul.suggestion-list li {
+  padding: 8px 16px;
+}
+
+ul.suggestion-list li a {
+  color: #333;
+  text-decoration: none;
+}
+
+li.profileLi {
+  position: relative;
 }
 
 .spearator {
-  height: 12px;
-  width: 2px;
-  background-color: #938c8c;
-  margin-right: 15px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 20px;
+  background-color: #ccc;
+  margin: 0 8px;
+}
+
+li.profileLi a {
+  color: #333;
+  text-decoration: none;
+}
+
+li.profileLi a:hover {
+  color: #666;
 }
 
 button {
-  border: unset;
   background-color: transparent;
-  padding: 10px;
-  color: black;
-  border-radius: 3px;
-  font-size: 26px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #333;
+  margin-right: 8px;
 }
 
-.margin0 {
-  margin: unset;
-}
-
-.alignTop {
-  align-items: flex-start !important;
-}
-
-.padding-left0 {
-  padding-left: unset;
-}
-
-.margin-bottom0 {
-  margin-bottom: unset;
-}
-
-#searchField {
-  width: 300px;
-  height: 30px;
-}
-
-.suggestion {
-  width: 300px;
-  height: 30px;
+button:hover {
+  color: #666;
 }
