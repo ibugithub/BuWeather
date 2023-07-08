@@ -1,63 +1,62 @@
 .search-forcast-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  .weather-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: skyblue;
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .weather-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .weather-icon {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 20px;
-  }
-  
-  .weather-title {
-    font-size: 28px;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
-  }
-  
-  .weather-description {
-    font-size: 22px;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .weather-extra {
-    display: flex;
-    width: 100%;
-    gap: 30px;
-  }
-  
-  .weather-info {
-    text-align: center;
-  }
-  
-  .weather-info-text {
-    font-size: 16px;
-    color: #666;
-  }
-  
-  .weather-info-value {
-    font-size: 18px;
-    color: #333;
-  }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.weather-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: skyblue;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.weather-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.weather-icon {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
+.weather-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.weather-description {
+  font-size: 22px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.weather-extra {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+}
+
+.weather-info {
+  text-align: center;
+}
+
+.weather-info-text {
+  font-size: 16px;
+  color: #666;
+}
+
+.weather-info-value {
+  font-size: 18px;
+  color: #333;
+}

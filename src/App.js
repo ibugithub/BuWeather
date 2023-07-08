@@ -1,4 +1,3 @@
-import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import ShowRegions from './components/showRegion/showRegions';
 import Country from './components/Country/Country';

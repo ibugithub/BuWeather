@@ -10,9 +10,8 @@
   padding-right: 30px;
 }
 
-.show-regions-card {  
+.show-regions-card {
   height: 200px;
-  background-color: skyblue;
   border-radius: 10px;
   margin-bottom: 20px;
   padding: 20px;
@@ -21,9 +20,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, #3182CE, #63B3ED);
+  background: linear-gradient(to bottom, #3182ce, #63b3ed);
   font-family: 'Your Custom Font', sans-serif;
-  color: black; 
+  color: black;
 }
 
 .show-regions-card:hover {
@@ -39,30 +38,28 @@
 .show-regions-card h4 {
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
-  
 }
 
 @media (max-width: 600px) {
   .show-regions-card {
-      flex-basis: 100%;
+    flex-basis: 100%;
   }
 }
 
 @media (max-width: 576px) {
   .show-regions-card {
-      height: auto;
+    height: auto;
   }
 }
 
-@media (min-width: 500px){
-  .show-regions-card{
+@media (min-width: 500px) {
+  .show-regions-card {
     flex-basis: calc(45% - 19px);
-  } 
+  }
 }
 
-@media (min-width: 800px){
-  .show-regions-card{
+@media (min-width: 800px) {
+  .show-regions-card {
     flex-basis: calc(30% - 16px);
-  } 
+  }
 }
-

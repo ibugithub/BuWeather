@@ -70,6 +70,11 @@ ul.suggestion-list li {
   padding: 8px 16px;
 }
 
+li.profileLi a {
+  color: #333;
+  text-decoration: none;
+}
+
 ul.suggestion-list li a {
   color: #333;
   text-decoration: none;
@@ -88,11 +93,6 @@ li.profileLi {
   height: 20px;
   background-color: #ccc;
   margin: 0 8px;
-}
-
-li.profileLi a {
-  color: #333;
-  text-decoration: none;
 }
 
 li.profileLi a:hover {
@@ -116,7 +116,7 @@ button:hover {
   display: none;
 }
 
-@media(max-width : 520px) {
+@media (max-width: 520px) {
   .siteTitle {
     display: none;
   }
