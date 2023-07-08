@@ -1,0 +1,59 @@
+.forcast-container {
+    display: flex;
+    justify-content: center;
+    height: 54vh;
+    margin-top: 50px;
+  }
+  
+  .forcast-card {
+    background-color: skyblue;
+    border-radius: 10px;
+    padding: 50px 110px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .forcast-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .forcast-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .forcast-day {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .forcast-weather {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .forcast-temperature,
+  .forcast-wind-speed {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .forcast-card {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .forcast-card {
+      width: 90%;
+    }
+  }
+  

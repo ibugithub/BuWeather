@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useParams, NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCountries } from '../redux/slices/WeatherSlice';
+import { fetchCountries } from '../../redux/slices/WeatherSlice';
+import './Country.css';
 
 const Country = () => {
   const { regionId } = useParams();
