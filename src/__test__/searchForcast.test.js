@@ -2,7 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchForcast } from '../redux/slices/forcast-by-text-slice';
-import SearchForcast from '../components/searchForcast/searchForcast';
+import SearchForcast from '../components/SearchForcast/searchForcast';
 
 jest.mock('react-redux');
 jest.mock('react-router-dom', () => ({
