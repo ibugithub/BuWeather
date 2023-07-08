@@ -1,0 +1,20 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.contentContainer {
+  display: flex;
+  background: url(http://localhost:3000/static/media/cloudy.a6d0b7d87d2022baaf4.png);
+  align-items: center;
+  flex-direction: column;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 270px;
+  height: 180px;
+  margin-top: 4%;
+}
+
+.contentLogo {
+  width: 70px;
+}
