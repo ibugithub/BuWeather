@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import { fetchRegions } from '../redux/slices/WeatherSlice';
+import { fetchRegions } from '../../redux/slices/WeatherSlice';
+import './showRegions.css';
 
 const ShowRegions = () => {
   const dispatch = useDispatch();

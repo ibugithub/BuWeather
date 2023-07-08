@@ -1,6 +1,6 @@
-import './styles/App.css';
+import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import ShowRegions from './components/showRegions';
+import ShowRegions from './components/showRegion/showRegions';
 import Country from './components/Country';
 import State from './components/State';
 import Forcast from './components/Forcast';
