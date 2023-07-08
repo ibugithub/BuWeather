@@ -52,7 +52,7 @@
 
 [BuWeather Live Demo](https://buweather.onrender.com/) 
 
-[Project presentetion record](https://www.loom.com/share/e55bdd98c4a84f7785276daed8b2abbe?sid=9615a862-dbb3-4d35-91ee-ce2c78ca35dc)
+[Project presentetion record](https://www.loom.com/share/26288a32ee2342a99c60367fd5b129a4?sid=036aa1cb-d1af-443c-8af1-5419be13edb8)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
