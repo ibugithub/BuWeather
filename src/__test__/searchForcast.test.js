@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { fetchForcast } from '../redux/slices/forcast-by-text-slice';
-import SearchForcast from '../components/searchForcast';
+import SearchForcast from '../components/searchForcast/searchForcast';
 
 jest.mock('react-redux');
 jest.mock('react-router-dom', () => ({

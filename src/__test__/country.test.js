@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { fetchCountries } from '../redux/slices/WeatherSlice';
-import Country from '../components/Country';
+import Country from '../components/Country/Country';
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
