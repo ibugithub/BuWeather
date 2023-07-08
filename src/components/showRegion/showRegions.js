@@ -33,17 +33,12 @@ const ShowRegions = () => {
     <div className="grid-container">
       {
         regions.map((region) => (
-          <>
-            <div className="contentContainer">
-              <li key={region.regionId}>
-                {' '}
-                <NavLink to={`/Country/${region.regionId}`}>
-                  {region.name}
-                </NavLink>
-              </li>
-            </div>
-
-          </>
+          <li className="contentContainer" key={region.regionId}>
+            {' '}
+            <NavLink to={`/Country/${region.regionId}`}>
+              {region.name}
+            </NavLink>
+          </li>
         ))
       }
     </div>
