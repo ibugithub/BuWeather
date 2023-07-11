@@ -44,7 +44,7 @@ const Navbar = () => {
   };
 
   const handleGoBack = () => {
-    navigate('/');
+    navigate(-1);
   };
 
   return (
@@ -59,7 +59,7 @@ const Navbar = () => {
         <h3 className="fontW400 margin0 siteTitle">BuWeather</h3>
       </div>
 
-      <div>
+      <div id="search-about-container">
         <ul className="NavBar_ul" data-testid="navBar" ref={navBar}>
           <li className="searchContainer">
             <input
@@ -86,10 +86,10 @@ const Navbar = () => {
               </ul>
             )}
           </li>
-          <li className="profileLi">
-            <NavLink to="/About">About</NavLink>
-          </li>
         </ul>
+        <div className="profileLi">
+          <NavLink to="/About">About</NavLink>
+        </div>
       </div>
     </nav>
   );

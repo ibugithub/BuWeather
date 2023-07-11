@@ -7,6 +7,7 @@
   background-color: #f1f1f1;
   padding: 20px;
   font-family: 'Montserrat', sans-serif;
+  padding-left: 15px;
 }
 
 .logo_title_container {
@@ -46,7 +47,7 @@ input#searchField {
   border-radius: 4px;
   font-size: 14px;
   color: #333;
-  width: 240px;
+  width: 100px;
   border: 1px solid skyblue;
   outline: none;
 }
@@ -68,6 +69,11 @@ ul.suggestion-list {
 
 ul.suggestion-list li {
   padding: 8px 16px;
+}
+
+.profileLi a {
+  text-decoration: none;
+  color: #333;
 }
 
 li.profileLi a {
@@ -106,6 +112,7 @@ button {
   font-size: 20px;
   color: #333;
   margin-right: 8px;
+  padding-left: unset;
 }
 
 button:hover {
@@ -125,4 +132,50 @@ button:hover {
 #backImg {
   width: 1.1rem;
   padding-top: 10px;
+}
+
+#search-about-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (min-width: 375px) {
+  input#searchField {
+    width: 150px;
+  }
+
+  #search-about-container {
+    gap: 20px;
+  }
+
+  .country-list-item {
+    width: 35%;
+  }
+}
+
+@media (min-width: 700px) {
+  input#searchField {
+    width: 250px;
+  }
+
+  #search-about-container {
+    gap: 20px;
+  }
+
+  .country-list-item {
+    width: 26%;
+  }
+}
+
+@media (min-width: 900px) {
+  .country-list-item {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1100px) {
+  input#searchField {
+    width: 350px;
+  }
 }
