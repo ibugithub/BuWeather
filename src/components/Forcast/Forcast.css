@@ -8,9 +8,9 @@
 .forcast-card {
   background-color: skyblue;
   border-radius: 10px;
-  padding: 50px 110px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  padding-top: 40px;
 }
 
 .forcast-card:hover {
@@ -45,14 +45,14 @@
   margin-bottom: 10px;
 }
 
-@media (max-width: 768px) {
+
   .forcast-card {
     width: 80%;
   }
-}
 
-@media (max-width: 576px) {
+
+@media (min-width: 900px) {
   .forcast-card {
-    width: 90%;
+    width: 70%;
   }
 }

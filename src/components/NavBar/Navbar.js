@@ -55,7 +55,10 @@ const Navbar = () => {
             <img id="backImg" src={back} alt="this is a back button" />
           </button>
         )}
-        <img className="logo" src={saturn} alt="Saturn Logo" />
+        <a href="/">
+          <img className="logo" src={saturn} alt="Saturn Logo" />
+        </a>
+
         <h3 className="fontW400 margin0 siteTitle">BuWeather</h3>
       </div>
 
